@@ -1,6 +1,6 @@
 import { useState } from "react"
 
-function Input({ userData }) {
+function Input({ setUserData }) {
     const [username, setUsername] = useState('')
 
     const fetchUser = async (e) => {
@@ -10,6 +10,7 @@ function Input({ userData }) {
         const data = await response.json()
     
         setUserData(data)
+        console.log(data)
     }
     return (
         <form onSubmit={fetchUser}>
