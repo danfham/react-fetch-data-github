@@ -6,6 +6,7 @@ function App() {
   const [userData, setUserData] = useState(null)
 
   const userDisplay = userData && <Display userData={userData} />
+  
   return (
     <div>
       <Input setUserData={setUserData} />
